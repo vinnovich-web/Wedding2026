@@ -34,10 +34,23 @@ body, html {
     background-repeat: no-repeat;
 }
 
-.card.first,
-.card.second {
-    position: relative; /* in plaats van sticky */
+/* EERSTE (STICKY) */
+.card.first {
+    position: relative;
+    top: 0;
     height: 100vh;
+
+    background-image: url('Page 1.png');
+    background-size: cover;
+}
+
+/* TWEEDE (STICKY) */
+.card.second {
+    position: relative;
+    top: 0;
+    height: 100vh;
+
+    background-image: url('page 2.png');
     background-size: cover;
 }
 
