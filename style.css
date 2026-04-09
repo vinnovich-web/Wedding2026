@@ -86,3 +86,36 @@ body, html {
     background-image: url('music.png');
     background-size: contain;
 }
+/* PLAY BUTTON */
+#playBtn {
+    position: absolute;
+
+    /* 🔥 PAS DIT AAN OP BASIS VAN JE DESIGN */
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 70px;
+    height: 70px;
+
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* PROGRESS BAR */
+#progress {
+    position: absolute;
+
+    /* 🔥 PAS DIT AAN OP BASIS VAN JE DESIGN */
+    bottom: 28%;
+    left: 22%;
+
+    width: 56%;
+    height: 3px;
+
+    background: black;
+
+    transform-origin: left;
+    transform: scaleX(0);
+}

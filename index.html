@@ -5,35 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding</title>
 
-    <!-- KOPPELING NAAR CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ACHTERGROND -->
-    <div class="background" id="bg"></div>
+<!-- AUDIO -->
+<audio id="music">
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
 
-    <!-- CONTENT -->
+<!-- ACHTERGROND -->
+<div class="background" id="bg"></div>
+
+<!-- CONTENT -->
 <div class="container">
     <div class="card first"></div>
     <div class="card second"></div>
     <div class="card third"></div>
     <div class="card fourth"></div>
-    <div class="card fifth"></div>
+
+    <!-- MUZIEK PLAYER -->
+    <div class="card fifth">
+        <button id="playBtn"></button>
+        <div id="progress"></div>
+    </div>
 </div>
 
-    <!-- PARALLAX SCRIPT -->
-    <script>
-        const bg = document.getElementById('bg');
+<!-- SCRIPT -->
+<script>
+const music = document.getElementById('music');
+const playBtn = document.getElementById('playBtn');
+const progress = document.getElementById('progress');
+const bg = document.getElementById('bg');
 
-        window.addEventListener('scroll', () => {
-            let scrollY = window.scrollY;
+let isPlaying = false;
 
-            // subtiele beweging (pas aan indien nodig)
-            bg.style.transform = `translateY(${scrollY * 0.12}px)`;
-        });
-    </script>
+/* PLAY / PAUSE */
+playBtn.addEventListener('click', () => {
+    if (!isPlaying) {
+        music.play();
+        isPlaying = true;
+    } else {
+        music.pause();
+        isPlaying = false;
+    }
+});
+
+/* PROGRESS BAR */
+music.addEventListener('timeupdate', () => {
+    if (music.duration) {
+        const percentage = music.currentTime / music.duration;
+        progress.style.transform = `scaleX(${percentage})`;
+    }
+});
+
+/* PARALLAX */
+window.addEventListener('scroll', () => {
+    let scrollY = window.scrollY;
+    bg.style.transform = `translateY(${scrollY * 0.12}px)`;
+});
+</script>
 
 </body>
 </html>
