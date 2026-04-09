@@ -152,3 +152,8 @@ body, html {
     font-size: 22px;
   }
 }
+.card.third {
+  aspect-ratio: 4 / 1;
+  background-image: url("nametag.png");
+  background-size: contain;
+   }
