@@ -1,60 +1,62 @@
-body, html {
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
   overflow-x: hidden;
   font-family: sans-serif;
+
+  background-image: url("./achtergrond.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-/* Achtergrond */
-.background {
-  position: fixed;
-  top: -20%;
-  left: 0;
-  width: 100%;
-  height: 160%;
-  background: url("achtergrond.png") center/cover no-repeat;
-  z-index: -1;
-}
-
-/* Container */
+/* CONTAINER */
 .container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 60px 16px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 40px;
-  padding-top: 80px;
 }
 
-/* Kaarten */
+/* CARDS */
 .card {
-  width: 45%;
-  margin: 0 auto;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+/* GROTE BLOKKEN */
 .card.first {
-  height: 100vh;
-  background-image: url("Page 1.png");
+  aspect-ratio: 9 / 16;
+  background-image: url("./Page 1.png");
   background-size: cover;
 }
 
 .card.second {
-  height: 100vh;
-  background-image: url("page 2.png");
+  aspect-ratio: 9 / 16;
+  background-image: url("./page 2.png");
   background-size: cover;
 }
 
+/* KLEINE BLOKKEN */
 .card.third {
   aspect-ratio: 4 / 1;
-  background-image: url("nametag.png");
+  background-image: url("./nametag.png");
   background-size: contain;
 }
 
 .card.fourth {
   aspect-ratio: 4 / 1;
-  background-image: url("before.png");
+  background-image: url("./before.png");
   background-size: contain;
 }
 
@@ -62,98 +64,112 @@ body, html {
 .card.fifth {
   aspect-ratio: 4 / 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+/* PLAYER INNER */
 .player {
-  width: 260px;
+  width: min(260px, 80vw);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
 }
 
-/* ❤️ Alleen HART groter */
+/* SVG */
 .progress-wrapper {
   position: relative;
-  width: 260px;   /* groter dan jouw oude 200 */
-  height: 300px;
+  width: 100%;
+  aspect-ratio: 260 / 300;
 }
 
-/* SVG */
 .flower-svg {
   width: 100%;
   height: 100%;
-  pointer-events: none; /* 🔥 maakt NIET klikbaar */
 }
 
-/* Play knop (ongewijzigd) */
+/* BUTTON */
 #playBtn {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
   border: none;
   background: pink;
   color: white;
   border-radius: 50%;
+
   width: 60px;
   height: 60px;
-  font-size: 28px;
+
+  font-size: 24px;
   cursor: pointer;
-  box-shadow: 0 0 8px rgba(255, 192, 203, 0.7);
-  transition: all 0.3s ease;
-  z-index: 10;
 }
 
-#playBtn:hover {
-  background: #ff69b4;
-  transform: translate(-50%, -50%) scale(1.05);
-}
-
-/* Progress glow */
-#flowerProgress {
-  filter: drop-shadow(0 0 6px pink);
-}
-
-/* Volume */
+/* VOLUME */
 #volume {
   width: 100%;
-  height: 4px;
-  appearance: none;
-  border-radius: 10px;
-  background: rgba(0, 0, 0, 0.2);
-  cursor: pointer;
 }
 
-#volume::-webkit-slider-thumb {
-  appearance: none;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: pink;
+/* ========================= */
+/* 🔥 COUNTDOWN FIXED */
+/* ========================= */
+
+.countdown-wrapper {
+  text-align: center;
+  margin-bottom: 25px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .card {
-    width: 90%;
-  }
-
-  .progress-wrapper {
-    width: 180px;
-    height: 210px;
-  }
-
-  #playBtn {
-    width: 50px;
-    height: 50px;
-    font-size: 22px;
-  }
+.date-title {
+  font-size: clamp(18px, 3vw, 28px);
+  letter-spacing: 2px;
+  margin-bottom: 15px;
 }
-.card.third {
-  aspect-ratio: 4 / 1;
-  background-image: url("nametag.png");
-  background-size: contain;
-   }
+
+/* naast elkaar houden */
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: clamp(10px, 2vw, 25px);
+  flex-wrap: nowrap;
+}
+
+/* elke kolom */
+.time-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* digits naast elkaar */
+.digits {
+  display: flex;
+  gap: clamp(4px, 1vw, 10px);
+}
+
+/* blokjes */
+.digit {
+  background: #3b3b3b;
+  color: white;
+  border-radius: 6px;
+
+  width: clamp(32px, 6vw, 70px);
+  height: clamp(45px, 8vw, 90px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: clamp(18px, 4vw, 40px);
+  font-weight: 500;
+}
+
+/* labels */
+.label {
+  font-size: clamp(10px, 2vw, 14px);
+  margin-top: 6px;
+  letter-spacing: 1px;
+}

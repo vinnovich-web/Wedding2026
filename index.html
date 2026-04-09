@@ -1,56 +1,51 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Wedding Music Player</title>
-<link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wedding Music Player</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
 <audio id="music">
   <source src="music.mp3" type="audio/mpeg" />
 </audio>
 
-<div class="background" id="bg"></div>
-
 <div class="container">
+
   <div class="card first"></div>
   <div class="card second"></div>
   <div class="card third"></div>
   <div class="card fourth"></div>
 
   <div class="card fifth">
+
+    <div class="countdown-wrapper">
+      <div class="date-title">19 juni 2026</div>
+      <div id="countdown"></div>
+    </div>
+
     <div class="player">
       
-      <div class="progress-wrapper" id="progressContainer">
+      <div class="progress-wrapper">
         
         <svg viewBox="0 0 120 140" class="flower-svg">
 
-          <!-- Hart achtergrond -->
           <path
-            d="M60 110
-               C20 80 10 40 35 25
-               C50 15 60 30 60 30
-               C60 30 70 15 85 25
-               C110 40 100 80 60 110 Z"
+            d="M60 110 C20 80 10 40 35 25 C50 15 60 30 60 30 C60 30 70 15 85 25 C110 40 100 80 60 110 Z"
             stroke="rgba(0,0,0,0.15)"
             stroke-width="5"
             fill="none"
           />
 
-          <!-- Progress hart -->
           <path
             id="flowerProgress"
-            d="M60 110
-               C20 80 10 40 35 25
-               C50 15 60 30 60 30
-               C60 30 70 15 85 25
-               C110 40 100 80 60 110 Z"
+            d="M60 110 C20 80 10 40 35 25 C50 15 60 30 60 30 C60 30 70 15 85 25 C110 40 100 80 60 110 Z"
             stroke="pink"
             stroke-width="5"
             fill="none"
-            stroke-linejoin="round"
             stroke-linecap="round"
           />
         </svg>
@@ -58,20 +53,12 @@
         <button id="playBtn">▶</button>
       </div>
 
-      <input
-        type="range"
-        id="volume"
-        min="0"
-        max="1"
-        step="0.01"
-        value="0.7"
-      />
+      <input type="range" id="volume" min="0" max="1" step="0.01" value="0.7"/>
 
     </div>
   </div>
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
