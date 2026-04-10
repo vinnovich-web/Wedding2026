@@ -19,7 +19,7 @@ html, body {
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 60px 16px;
   display: flex;
@@ -39,12 +39,26 @@ html, body {
   aspect-ratio: 9 / 16;
   background-image: url("./Page 1.png");
   background-size: cover;
+   margin-top: -90px;
+  margin-bottom: -40px;
 }
 
 .card.second {
   aspect-ratio: 9 / 16;
   background-image: url("./page 2.png");
   background-size: cover;
+}
+
+.card.rsvp {
+  aspect-ratio: 16 / 4;
+  background-image: url("./rsvp.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 90%;        /* mobiel */
+  max-width: 400px;  /* desktop limiet */
+  margin: 0 auto;
 }
 
 /* KLEINE BLOKKEN */
