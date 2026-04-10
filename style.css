@@ -52,6 +52,54 @@ html, body {
   aspect-ratio: 4 / 1;
   background-image: url("./nametag.png");
   background-size: contain;
+  margin-top: -90px;
+  margin-bottom: -40px;
+}
+
+.card.third1 {
+  aspect-ratio: 4 / 1;
+  background-image: url("./nametag.png");
+  background-size: contain;
+}
+
+.card.third2 {
+  aspect-ratio: 4 / 1;
+  background-image: url("./nametag.png");
+  background-size: contain;
+  margin-top: -20px;
+  margin-bottom: -20px;
+}
+
+.card.third3 {
+  aspect-ratio: 4 / 1;
+  background-image: url("./nametag.png");
+  background-size: contain;
+  margin-top: -20px;
+  margin-bottom: -20px;
+}
+
+.card.third4 {
+  aspect-ratio: 4 / 1;
+  background-image: url("./nametag.png");
+  background-size: contain;
+  margin-top: -20px;
+  margin-bottom: -20px;
+}
+
+.card.third5 {
+  aspect-ratio: 4 / 1;
+  background-image: url("./nametag.png");
+  background-size: contain;
+  margin-top: -20px;
+  margin-bottom: -20px;
+}
+
+.card.third6 {
+  aspect-ratio: 4 / 1;
+  background-image: url("./nametag.png");
+  background-size: contain;
+  margin-top: -20px;
+  margin-bottom: -20px;
 }
 
 .card.fourth {
@@ -68,9 +116,97 @@ html, body {
   justify-content: center;
   align-items: center;
 }
+
 .card.sixth {
   aspect-ratio: 4 / 1;
-  background-image: url("./nametag.png");
+  background-image: url("./Wedding location.png");
+  background-size: contain;
+}
+
+.card.zeventh {
+  aspect-ratio: 2 / 1;
+  background-image: url("./Huis.png");
+  background-size: contain;
+}
+
+/* ✅ FIXED CARD EIGHT */
+.card.eight {
+  display: block;
+  cursor: pointer;
+  aspect-ratio: 2 / 1;
+  background-image: url("./click for the location.png");
+  background-size: contain;
+  margin-top: -40px;
+  margin-bottom: -60px;
+}
+
+/* ✅ HOVER MUST BE OUTSIDE */
+.card.eight:hover {
+  transform: scale(1.03);
+  transition: 0.2s;
+}
+
+.card.nineth {
+  aspect-ratio: 4 / 1;
+  background-image: url("./Wedding ceremony.png");
+  background-size: contain;
+  margin-top: -10px;
+  margin-bottom: -40px;
+}
+
+.card.tenth {
+  aspect-ratio: 2 / 1;
+  background-image: url("./time scedule.png");
+  background-size: contain;
+}
+
+.card.eleven {
+  aspect-ratio: 2 / 1;
+  background-image: url("./dress code.png");
+  background-size: contain;
+  margin-top: -70px;
+  margin-bottom: -40px;
+}
+
+.card.twelve {
+  aspect-ratio: 2 / 1;
+  background-image: url("./collor code.png");
+  background-size: contain;
+}
+
+.card.thirtheen {
+  aspect-ratio: 2 / 1;
+  background-image: url("./about us.png");
+  background-size: contain;
+  margin-top: -90px;
+  margin-bottom: -40px;
+}
+
+.card.fourtheen {
+  aspect-ratio: 2 / 1;
+  background-image: url("./3 fotos samen.png");
+  background-size: contain;
+  margin-top: -20px;
+  margin-bottom: -10px;
+}
+
+.card.fifthteen {
+  aspect-ratio: 2 / 1;
+  background-image: url("./thank you.png");
+  background-size: contain;
+}
+
+.card.sixtheen {
+  aspect-ratio: 2 / 1;
+  background-image: url("./thank you.png");
+  background-size: contain;
+  margin-top: -40px;
+  margin-bottom: -40px;
+}
+
+.card.zeventeen {
+  aspect-ratio: 2 / 1;
+  background-image: url("./we hope.png");
   background-size: contain;
 }
 
@@ -119,10 +255,7 @@ html, body {
   width: 100%;
 }
 
-/* ========================= */
-/* 🔥 COUNTDOWN FIXED */
-/* ========================= */
-
+/* COUNTDOWN */
 .countdown-wrapper {
   text-align: center;
   margin-bottom: 25px;
@@ -134,7 +267,6 @@ html, body {
   margin-bottom: 15px;
 }
 
-/* naast elkaar houden */
 #countdown {
   display: flex;
   justify-content: center;
@@ -142,20 +274,17 @@ html, body {
   flex-wrap: nowrap;
 }
 
-/* elke kolom */
 .time-block {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* digits naast elkaar */
 .digits {
   display: flex;
   gap: clamp(4px, 1vw, 10px);
 }
 
-/* blokjes */
 .digit {
   background: #3b3b3b;
   color: white;
@@ -172,7 +301,6 @@ html, body {
   font-weight: 500;
 }
 
-/* labels */
 .label {
   font-size: clamp(10px, 2vw, 14px);
   margin-top: 6px;
