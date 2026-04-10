@@ -16,6 +16,11 @@ html, body {
   background-attachment: scroll;
 }
 
+/* FONT FIX (toegevoegd) */
+body {
+  font-family: 'Playfair Display', serif;
+}
+
 /* CONTAINER */
 .container {
   width: 100%;
@@ -39,9 +44,7 @@ html, body {
   aspect-ratio: 9 / 16;
   background-image: url("./Page 1.png");
   background-size: cover;
-   margin-top: -90px;
-  margin-bottom: -40px;
-}
+ }
 
 .card.second {
   aspect-ratio: 9 / 16;
@@ -49,15 +52,22 @@ html, body {
   background-size: cover;
 }
 
+/* TEXT BLOCK */
+.RSVPtext {
+  text-align: center;
+  font-size: clamp(18px, 3vw, 26px);
+  color: #5a6b4f;
+  margin: 20px 0;
+}
 .card.rsvp {
-  aspect-ratio: 16 / 4;
+  aspect-ratio: 8 / 2;
   background-image: url("./rsvp.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 
-  width: 90%;        /* mobiel */
-  max-width: 400px;  /* desktop limiet */
+  width: 80%;
+  max-width: 200px;
   margin: 0 auto;
 }
 
@@ -66,8 +76,6 @@ html, body {
   aspect-ratio: 4 / 1;
   background-image: url("./nametag.png");
   background-size: contain;
-  margin-top: -90px;
-  margin-bottom: -40px;
 }
 
 .card.third1 {
@@ -80,47 +88,60 @@ html, body {
   aspect-ratio: 4 / 1;
   background-image: url("./nametag.png");
   background-size: contain;
-  margin-top: -20px;
-  margin-bottom: -20px;
+}
+
+/* TEXT BLOCK */
+.wedding-info-text {
+  text-align: center;
+  color: #5a6b4f;
+  margin: 20px 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.wedding-info-text div {
+  font-size: clamp(18px, 3vw, 26px);
+  letter-spacing: 2px;
 }
 
 .card.third3 {
   aspect-ratio: 4 / 1;
   background-image: url("./nametag.png");
   background-size: contain;
-  margin-top: -20px;
-  margin-bottom: -20px;
 }
 
 .card.third4 {
   aspect-ratio: 4 / 1;
   background-image: url("./nametag.png");
   background-size: contain;
-  margin-top: -20px;
-  margin-bottom: -20px;
+}
+/* TEXT BLOCK */
+.Dresscode {
+  text-align: center;
+  font-size: clamp(18px, 3vw, 26px);
+  color: #5a6b4f;
+  margin: 20px 0;
 }
 
 .card.third5 {
   aspect-ratio: 4 / 1;
   background-image: url("./nametag.png");
   background-size: contain;
-  margin-top: -20px;
-  margin-bottom: -20px;
 }
 
 .card.third6 {
   aspect-ratio: 4 / 1;
   background-image: url("./nametag.png");
   background-size: contain;
-  margin-top: -20px;
-  margin-bottom: -20px;
 }
 
-.card.fourth {
-  aspect-ratio: 4 / 1;
-  background-image: url("./before.png");
-  background-size: contain;
-}
+.scrolling{
+  text-align: center;
+  font-size: clamp(18px, 3vw, 26px);
+  color: #5a6b4f;
+  }
 
 /* PLAYER */
 .card.fifth {
@@ -133,12 +154,20 @@ html, body {
 
 .card.sixth {
   aspect-ratio: 4 / 1;
-  background-image: url("./Wedding location.png");
+  background-image: url("./wedding-location.png");
   background-size: contain;
-  transform: scale(6.03);
-  transition: 4.2s;
-   margin-top: 40px;
-  margin-bottom: 0px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform: none;
+  width: 100%;
+  margin: 40px 0;
+
+  transition: transform 0.2s ease;
+}
+
+.card.sixth:hover {
+  transform: scale(1.1);
 }
 
 .card.zeventh {
@@ -147,29 +176,25 @@ html, body {
   background-size: contain;
 }
 
-/* ✅ FIXED CARD EIGHT */
+/* LOCATION BUTTON */
 .card.eight {
   display: block;
   cursor: pointer;
   aspect-ratio: 2 / 1;
   background-image: url("./click for the location.png");
   background-size: contain;
-  margin-top: -40px;
-  margin-bottom: -60px;
+
+  transition: transform 0.2s ease;
 }
 
-/* ✅ HOVER MUST BE OUTSIDE */
 .card.eight:hover {
   transform: scale(1.03);
-  transition: 0.2s;
 }
 
 .card.nineth {
   aspect-ratio: 4 / 1;
   background-image: url("./Wedding ceremony.png");
   background-size: contain;
-  margin-top: -10px;
-  margin-bottom: -40px;
 }
 
 .card.tenth {
@@ -182,8 +207,6 @@ html, body {
   aspect-ratio: 2 / 1;
   background-image: url("./dress code.png");
   background-size: contain;
-  margin-top: -70px;
-  margin-bottom: -40px;
 }
 
 .card.twelve {
@@ -192,20 +215,17 @@ html, body {
   background-size: contain;
 }
 
-.card.thirtheen {
-  aspect-ratio: 2 / 1;
-  background-image: url("./about us.png");
-  background-size: contain;
-  margin-top: -90px;
-  margin-bottom: -40px;
+/* TEXT BLOCK */
+.aboutus-text{
+  text-align: center;
+  font-size: clamp(18px, 3vw, 26px);
+  color: #5a6b4f;
 }
 
 .card.fourtheen {
   aspect-ratio: 2 / 1;
   background-image: url("./3 fotos samen.png");
   background-size: contain;
-  margin-top: -20px;
-  margin-bottom: -10px;
 }
 
 .card.fifthteen {
@@ -214,36 +234,30 @@ html, body {
   background-size: contain;
 }
 
-.advice-text {
+.our-gift-advice-text {
   text-align: center;
   font-size: clamp(18px, 3vw, 26px);
-  letter-spacing: 2px;
-  color: #5a6b4f; /* soft green like your design */
-  margin-top: 20px;
-  margin-bottom: 20px;
+  color: #5a6b4f;
 }
-.thankyou-text {
-  text-align: center;
-  font-size: clamp(18px, 3vw, 26px);
-  letter-spacing: 2px;
-  color: #5a6b4f; /* soft green like your design */
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
+
 .card.gift {
   aspect-ratio: 2 / 1;
-  background-image: url("./card hint.png");
+  background-image: url("./card hint.PNG");
   background-size: contain;
-   margin-top: 0px;
+  margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 30px;
 }
+
 .card.zeventeen {
   aspect-ratio: 2 / 1;
   background-image: url("./we hope.png");
   background-size: contain;
-  margin-top: -20px;
-  margin-bottom: -200px;
+}
+.thankyou-text {
+  text-align: center;
+  font-size: clamp(18px, 3vw, 26px);
+  color: #5a6b4f;
 }
 
 /* PLAYER INNER */
@@ -341,4 +355,21 @@ html, body {
   font-size: clamp(10px, 2vw, 14px);
   margin-top: 6px;
   letter-spacing: 1px;
+}
+
+/* MOBILE FIX */
+@media (max-width: 600px) {
+  .container {
+    padding: 40px 12px;
+    gap: 30px;
+  }
+
+  .card.third,
+  .card.third1,
+  .card.third2,
+  .card.third3,
+  .card.third4,
+  .card.third5,
+  .card.third6 {
+    }
 }

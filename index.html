@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Wedding Music Player</title>
+
+  <!-- ✅ Playfair Display font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -17,17 +21,28 @@
 
   <div class="card first"></div>
   <div class="card second"></div>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfuN8BD8LpYOWM5Nl1jRuTilapmXZFJXRsrE3FMrzCl5MnYEw/viewform?usp=dialog" target="_blank" class="card rsvp"></a>
+
+ <div class="RSVPtext">
+      <div>Your Presence Means Everything — Please click RSVP</div>
+    </div> 
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfuN8BD8LpYOWM5Nl1jRuTilapmXZFJXRsrE3FMrzCl5MnYEw/viewform?usp=dialog"
+     target="_blank"
+     class="card rsvp"></a>
+
   <div class="card third"></div>
-  <div class="card fourth"></div>
-  <div class="card "></div>
+
+  <div class="scrolling">
+      <div>Before scrolling down, please play this music</div>
+    </div>
+
+  <div class="card"></div>
 
   <div class="card fifth">
-  
+
     <div class="player">
-      
+
       <div class="progress-wrapper">
-        
+
         <svg viewBox="0 0 120 140" class="flower-svg">
 
           <path
@@ -51,45 +66,53 @@
       </div>
 
       <input type="range" id="volume" min="0" max="1" step="0.01" value="0.7"/>
-      
-    
 
-    <div class="countdown-wrapper">
-      <div class="card third1"></div>
-      <div class="date-title">19 juni 2026</div>
-      <div id="countdown"></div>
     </div>
 
-
-
-      
-    </div>
     <div class="card third2"></div>
-    <div class="card sixth"></div>
+
+    <!-- ✅ tekst blok -->
+    <div class="wedding-info-text">
+      <div>About the wedding</div>
+      <div>Residence Fam. Kennes</div>
+    </div>
+
     <div class="card zeventh"></div>
-    <a href="https://maps.app.goo.gl/cBRbjW2cRLHypAZ7A" target="_blank" class="card eight"></a>
+
+    <a href="https://maps.app.goo.gl/cBRbjW2cRLHypAZ7A"
+       target="_blank"
+       class="card eight"></a>
+
     <div class="card third3"></div>
     <div class="card ninethremove"></div>
-    <div class="card tenthremove"></div>
+
     <div class="card third4remove"></div>
-    <div class="card eleven"></div>
+
+    <div class=""></div>
+    <div class="Dresscode">
+      <div>Schedule and dress code</div>
+    </div>
+
     <div class="card twelve"></div>
-     <div class="card third5"></div>
-    <div class="card thirtheen"></div>
-    <div class="card fourtheen"></div>
+
+    <div class="card third5"></div>
+    <div class="aboutus-text">About us</div>
+        <div class="card fourtheen"></div>
     <div class="card fiftheen"></div>
-     <div class="card third6"></div>
-     <div class="Our gift advice-text">
-    Our gift advice
-    </div>
+
+    <div class="card third6"></div>
+
+    <div class="our-gift-advice-text">Our gift advice</div>
+
     <div class="card gift"></div>
-    <div class="thankyou-text">
-    Thank you
-    </div>
+
+    <div class="thankyou-text">Thank you</div>
+
     <div class="card zeventeen"></div>
+
   </div>
 </div>
-      
+
 <script src="script.js"></script>
 </body>
 </html>
